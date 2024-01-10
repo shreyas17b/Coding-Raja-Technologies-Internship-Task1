@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="cv-form" class="container">
+        <h1 id="heading" class="text-center my-2">Resume Generator</h1>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h3 style="font-weight: 700">Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="nameField"> Your Name:</label>
+                    <input type=" text" style="background-color: rgb(232 232 232);" placeholder="Enter Here"
+                        class="form-control bgc" id="nameField">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="contactField"> Your contact No:</label>
+                    <input type=" text" style="background-color: rgb(232 232 232);" placeholder="Enter Here"
+                        class="form-control bgc" id="contactField">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="AddressField"> Your Address:</label>
+                    <textarea placeholder="Enter Here" style="background-color: rgb(232 232 232);"
+                        class="form-control bgc" id="AddressField"></textarea>
+                </div>
+
+
+                <div class="form-group mt-2">
+                    <label for=""> Select your photo</label>
+                    <input id="imgField" type="file" class="form-controls bgc">
+                </div>
+
+                <p class="text-secondary mt-2"> IMPORTANT LINKS </p>
+
+                <div class="form-group mt-3">
+                    <label for="fbField "> Facebook</label>
+                    <input type=" text" placeholder="Enter Here" style="background-color: rgb(232 232 232);"
+                        class="form-control bgc" id="fbField">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="instaField"> Instagram</label>
+                    <input type=" text" placeholder="Enter Here" style="background-color: rgb(232 232 232);"
+                        class="form-control bgc" id="instaField">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="linkedField"> LinkdIn</label>
+                    <input type=" text" placeholder="Enter Here" style="background-color: rgb(232 232 232);"
+                        class="form-control bgc" id="linkedField">
+                </div>
+
+                <div class="form-group mt-2" id="lang">
+                    <label for=""> Languages Known:</label>
+                    <textarea class="form-control bgc LanguageField" rows="3" style="background-color: rgb(232 232 232);"
+                        placeholder="Enter Here"></textarea>
+
+
+                    <div class="container text-center mt-2" id="langAddButton">
+                        <button onclick="addNewLangField()" class=" btn btn-primary btn-sm"> Add </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <h3 style="font-weight: 700">Professional Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for=""> About ME</label>
+                    <textarea id="objectiveField" placeholder="Enter Here" style="background-color: rgb(232 232 232);"
+                        class="form-control bgc" rows="4"> </textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for=""> Work Experience</label>
+                    <textarea class="form-control bgc weField" rows="3" style="background-color: rgb(232 232 232);"
+                        placeholder="Enter Here"></textarea>
+
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class=" btn btn-primary btn-sm"> Add </button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for=""> Accademic Qualification</label>
+                    <textarea class="form-control bgc eqField" rows="3" style="background-color: rgb(232 232 232);"
+                        placeholder="Enter Here"></textarea>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm"> Add </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cointainer text-center mt-2">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg"> Generate CV</button>
+        </div>
+    </div>
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+
+                <img src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg" alt=""
+                    class="img-fluid myimg" id="imgTemplate" />
+
+                <div class="container">
+                    <p id="nameT1" style="font-size: 17px">Shreyah Ravalekar</p>
+                    <p id="contactT" style="font-size: 17px">+918834538489, +913453775383</p>
+                    <p id="addressT" style="font-size: 17px">504-B green-hills santosh-nagar,balewadi pune-411104</p>
+
+                    <hr>
+                    <p>
+                        <a id="fbT" href="#1" style="font-size: 18px">https://www.Facebook.com</a>
+                    </p>
+                    <p>
+                        <a id="instaT" href="#1" style="font-size: 18px">https://www.Instagram.com</a>
+                    </p>
+                    <p>
+                        <a id="linkedT" href="#1" style="font-size: 18px">https://www.LinkdIn.com</a>
+                    </p>
+
+                    <hr>
+                    <div>
+                        <h5 class="Lancol" style="font-size: medium"> Languages Known</h5>
+                        <p id="languageT" style="font-size: 17px"> English, Hindi</p>
+                    </div>
+                    
+
+
+                </div>
+            </div>
+
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight: 900;">Shreyah Ravalekar</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header" id="bgt">
+                        <h3>About you</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, nam? Ut,
+                            aliquam. Quod,
+                            accusantium. Sit dolor voluptates impedit libero iste maiores vitae! Necessitatibus
+                            voluptates possimus, quos ea veritatis laudantium velit.</p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header" id="bgt">
+                        <h3>Work Experience</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header" id="bgt">
+                        <h3>Accademic Qualification</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, magnam.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn btn-primary btn-lg"> Print </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

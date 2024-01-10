@@ -1,0 +1,32 @@
+#cv-template{
+    display: none;
+}
+.myimg{
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background{
+    background-color:  rgb(157 78 209);
+}
+
+#bgt{
+    background-color: rgb(157 78 209);
+}
+
+.jj{
+    background-color:  rgb(157 78 209); 
+}
+
+#heading{
+    background-color:#448efb;
+}
+
+bgc{
+    background-color: slategray;
+}
+
+.Lancol{
+    color: black;
+}
